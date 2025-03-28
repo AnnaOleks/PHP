@@ -1,0 +1,488 @@
+/*header*/
+
+header{
+    background-color: black;
+    border: double 5px white;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px auto 0 auto;
+}
+#headerPHP{
+    font-size: 25px;
+    font-variant: all-petite-caps;
+    padding: 5px 0;
+    background-color: white;
+    color: black;
+    font-family: 'Lato', serif;
+    text-shadow: 3px 3px 3px #ababab;
+    text-align: center;
+    border-top-right-radius: 94px;
+    border-top-left-radius: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+header h1{
+    letter-spacing: 0.1cm;
+}
+
+
+/*menyy*/
+
+nav{
+    display: flex;
+    position: relative;
+    height: 130px;
+    max-width: 1406px;
+    margin: 0 auto;
+    background: black;
+    background-image: url("../img/fon.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    line-height: 1;
+    padding: 0;
+    list-style-type: none;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    justify-content: center;
+    animation: slideIn 5s ease-in forwards;
+}
+nav ul{
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav li {
+    position: relative;
+    display: flex;
+    z-index: 100;
+}
+nav li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    width: 220px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    border: double 3px white;
+    border-radius: 50px;
+    background-color: black;
+}
+nav li:hover > a {
+    background: white;
+    color: black;
+    border-color: black;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    margin-top: 0.5px;
+    transition: opacity 2s ease;
+    width: 100%;
+    min-width: 220px;
+}
+nav li:hover > .dropdown {
+    display: block;
+    opacity: 1;
+}
+nav li:hover>ul{
+    display: block;
+}
+
+
+/*body*/
+
+body{
+    display: block;
+    font-family: 'Lato', serif;
+    background: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+main{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1409px;
+    margin: 0 auto;
+    background: black;
+    border-top: double 5px white;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    color: white;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+a{
+    text-decoration: none;
+    color: #77e0cb;
+}
+
+
+/*footer*/
+
+footer{
+    margin-bottom: 50px;
+    background-color: black;
+    border: double 5px white;
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    width: 100%;
+    max-width: 1400px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#footerPHP{
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    font-family: 'Lato', serif;
+    width: 100%;
+    text-align: center;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*canva*/
+
+canvas{
+    background-color: white;
+    width: 600px;
+    height: 450px;
+    border: double 5px black;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+input[type=button]{
+    border: double 5px black;
+    border-radius: 30px;
+    color: gray;
+    padding: 10px;
+    width: 150px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: white;
+}
+input[type=button]:hover{
+    color: black;
+    font-weight: bold;
+}
+#Taevas:hover{
+    background-color: #fddcf0;
+}
+#Meri:hover{
+    background-color: #e6d7fa;
+}
+#Sein:hover{
+    background-color: #cee7fb;
+}
+#Katus:hover{
+    background-color: #cefbf4;
+}
+#Korsten:hover{
+    background-color: #cff7c2;
+}
+#Aken:hover{
+    background-color: #cefbf4;
+}
+#Maa:hover{
+    background-color: #cee7fb;
+}
+#Pilv:hover{
+    background-color: #e6d7fa;
+}
+#Paike:hover{
+    background-color: #fddcf0;
+}
+#Rohi:hover{
+    background-color: #e6d7fa;
+}
+#Uks:hover{
+    background-color: #cee7fb;
+}
+#Suits:hover{
+    background-color: #cefbf4;
+}
+#majanupp:hover{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+#kustutanupp:hover{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+table#tablepyhi tr:nth-child(1) td:nth-child(1) {
+    width: 420px;
+}
+table#tablepyhi tr:nth-child(1) td:nth-child(2) {
+    vertical-align: top;
+}
+table#tablelipud tr:nth-child(1) td:nth-child(1) {
+    width: 350px;
+    vertical-align: top;
+}
+table#tablelipud tr:nth-child(1) td:nth-child(2) {
+    width: 220px;
+    vertical-align: top;
+}
+table#tablelipud tr:nth-child(1) td:nth-child(3) {
+    width: 270px;
+    vertical-align: top;
+}
+table#tablelipud tr:nth-child(1) td:nth-child(4) {
+    width: 150px;
+    vertical-align: top;
+}
+table#tablemajake tr:nth-child(1) td:nth-child(1) {
+    width: 420px;
+    vertical-align: top;
+}
+table#tablemajake tr:nth-child(1) td:nth-child(2) {
+    width: 150px;
+    vertical-align: top;
+}
+table#tablemajake tr:nth-child(1) td:nth-child(3) {
+    width: 150px;
+    vertical-align: top;
+}
+table#tablemajake tr:nth-child(1) td:nth-child(4) {
+    width: 150px;
+    vertical-align: top;
+}
+table#tablemajake tr:nth-child(1) td:nth-child(5) {
+    width: 150px;
+    vertical-align: top;
+}
+#majanupp{
+    width: 300px;
+}
+#kustutanupp{
+    width: 300px;
+}
+#radiuspaike{
+    width: 140px;
+    height: 35px;
+    border: double 5px black;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+label{
+    font-size: 18px;
+}
+
+
+/*kalkulaator*/
+
+p{
+    text-align: left;
+    font-size: 18px;
+}
+#audi{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#audi:active{
+    width:700px;
+}
+#BMW{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#BMW:active{
+    width:700px;
+}
+#jaguar{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#jaguar:active{
+    width:700px;
+}
+#Merc{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#Merc:active{
+    width:700px;
+}
+#chevr{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#chevr:active{
+    width:700px;
+}
+#ford{
+    width:300px;
+    border: double 5px white;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+#ford:active{
+    width:700px;
+}
+table#autod{
+    vertical-align: top;
+}
+#autovalik{
+    text-align: left;
+}
+#vabaautopilt{
+    text-align: left;
+}
+#autod tr:nth-child(1) td:nth-child(3){
+    width:30px;
+    border-right: solid 3px white;
+}
+#autod tr:nth-child(1) td:nth-child(4){
+    vertical-align: top;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 18px;
+}
+#autod tr:nth-child(1) td:nth-child(5){
+    text-align: left;
+}
+#autod tr:nth-child(3) td:nth-child(3){
+    vertical-align: top;
+    padding-left: 30px;
+}
+#autod tr:nth-child(5) td:nth-child(3){
+    vertical-align: top;
+    padding-left: 30px;
+    text-align: left;
+}
+input[type=radio] {
+    accent-color: #77e0cb;
+}
+#auto1{
+    width: 20px;
+    height: 20px;
+}
+#auto2{
+    width: 20px;
+    height: 20px;
+}
+#auto3{
+    width: 20px;
+    height: 20px;
+}
+#auto4{
+    width: 20px;
+    height: 20px;
+}
+#auto5{
+    width: 20px;
+    height: 20px;
+}
+#auto6{
+    width: 20px;
+    height: 20px;
+}
+#valik{
+    border: double 5px white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+}
+#valikpilt{
+    width: 200px;
+}
+#vabaauto{
+    width: 220px;
+    border: double 5px white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+input[type=button]:hover{
+    color: black;
+    font-weight: bold;
+    background-color: #fddcf0;
+}
+#tasumisele{
+    border: double 5px black;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    width: 220px;
+    color: black;
+}
+input[type=number]{
+    border: double 5px black;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: gray;
+    padding: 10px;
+    width: 130px;
+}
+input[type=number]:hover{
+    color: black;
+}
+caption{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+/*matemTehted*/
+
+#moistatus{
+    text-align: left;
+    font-size: 16px;
+}
+#formarvud{
+    text-align: left;
+}
+#kood{
+    text-align: left;
+    background-color: white;
+    padding: 10px;
+    border: double 5px black;
+
+}
+input[type=submit]{
+    border: double 5px black;
+    border-radius: 30px;
+    color: gray;
+    padding: 10px;
+    width: 150px;
+    margin-right: 10px;
+    font-size: 16px;
+    background-color: white;
+}
+input[type=submit]:hover{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
