@@ -9,14 +9,18 @@ function clearVarsExcept($url, $varname) {
     // strtok - returns first token after spliting on separator "?" strtoken('index.php?haha=lala', '?') > index.php
     return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
 }
-echo "<h2>Matemaatilised tehted</h2>";
+echo "<br>";
+echo "<h1>Matemaatilised tehted</h1>";
 echo "<a href='https://www.metshein.com/unit/php-matemaatilised-tehted-ulesanne-2/'>
     PHP matemaatilised tehted</a>";
+echo "<br>";
+echo "<br>";
 ?>
-<div id="moistatus">
+
+<div class="moistatus">
     <?php
     // mõistatus
-    echo "<h2> Мы загадали 2 числа до 10 </h2>";
+    echo "<h3> Мы загадали 2 числа до 10 </h3>";
     $arv1=10;
     $arv2=5;
     //в подсказках перебрать все математические операции
@@ -65,8 +69,7 @@ if(isset($_REQUEST["arv1"])){
     highlight_file('matemTehted.php');
     ?>
 </div>
-<br>
-<br>
+
 
 
 

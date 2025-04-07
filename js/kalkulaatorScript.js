@@ -72,22 +72,22 @@ function autovalikJS(){
 
     if (auto1.checked){
         valikID.innerHTML=auto1.value;
-        valikpilt.src="img/AudiA5.jpg";
+        valikpilt.src="content/img/AudiA5.jpg";
     } else if (auto2.checked){
         valikID.innerHTML=auto2.value;
-        valikpilt.src="img/BMWm6.jpg";
+        valikpilt.src="content/img/BMWm6.jpg";
     } else if (auto3.checked){
         valikID.innerHTML=auto3.value;
-        valikpilt.src="img/JAGUARXF.jpg";
+        valikpilt.src="content/img/JAGUARXF.jpg";
     } else if (auto4.checked){
         valikID.innerHTML=auto4.value;
-        valikpilt.src="img/MercedesCLS63AMG.jpg";
+        valikpilt.src="content/img/MercedesCLS63AMG.jpg";
     } else if (auto5.checked){
         valikID.innerHTML=auto5.value;
-        valikpilt.src="img/ChevroletCamaro.jpg";
+        valikpilt.src="content/img/ChevroletCamaro.jpg";
     } else if (auto6.checked){
         valikID.innerHTML=auto6.value;
-        valikpilt.src="img/FordMustangV6.jpg";
+        valikpilt.src="content/img/FordMustangV6.jpg";
     } else {
         valik.innerHTML="Sa pead midagi valima"
     }
@@ -95,12 +95,12 @@ function autovalikJS(){
 
 function vabaauto(){
     const autod=[
-        'img/AudiA5.jpg',
-        'img/BMWm6.jpg',
-        'img/JAGUARXF.jpg',
-        'img/MercedesCLS63AMG.jpg',
-        'img/ChevroletCamaro.jpg',
-        'img/FordMustangV6.jpg',
+        'content/img/AudiA5.jpg',
+        'content/img/BMWm6.jpg',
+        'content/img/JAGUARXF.jpg',
+        'content/img/MercedesCLS63AMG.jpg',
+        'content/img/ChevroletCamaro.jpg',
+        'content/img/FordMustangV6.jpg',
     ];
     //random pilt
     const pilt=Math.floor(Math.random()*autod.length);

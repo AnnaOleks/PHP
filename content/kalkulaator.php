@@ -1,10 +1,11 @@
+<br>
 <h1>Auto rent</h1>
 <br>
 <table id="autod">
     <caption><strong>Vali endale auto!</strong></caption>
     <tr>
-        <td><img src="img/AudiA5.jpg" alt="Audi" id="audi"></td>
-        <td><img src="img/BMWm6.jpg" alt="BMW" id="BMW"></td>
+        <td><img src="content/img/AudiA5.jpg" alt="Audi" id="audi"></td>
+        <td><img src="content/img/BMWm6.jpg" alt="BMW" id="BMW"></td>
         <td rowspan="6"></td>
         <td id="autovalik" rowspan="2">
             <p><strong>Sinu valik: </strong></p>
@@ -28,8 +29,8 @@
         </td>
     </tr>
     <tr>
-        <td><img src="img/JAGUARXF.jpg" alt="Jaguar" id="jaguar"></td>
-        <td><img src="img/MercedesCLS63AMG.jpg" alt="Mercedes" id="Merc"></td>
+        <td><img src="content/img/JAGUARXF.jpg" alt="Jaguar" id="jaguar"></td>
+        <td><img src="content/img/MercedesCLS63AMG.jpg" alt="Mercedes" id="Merc"></td>
         <td id="vabaautopilt" rowspan="2">
             <p><strong>Vaata, mis auto on vaba (vajuta nuppule): </strong></p>
             <input type="button" value="Vaba auto" onclick="vabaauto()">
@@ -54,8 +55,8 @@
         </td>
     </tr>
     <tr>
-        <td><img src="img/ChevroletCamaro.jpg" alt="Chevrolet" id="chevr"></td>
-        <td><img src="img/FordMustangV6.jpg" alt="Ford" id="ford"></td>
+        <td><img src="content/img/ChevroletCamaro.jpg" alt="Chevrolet" id="chevr"></td>
+        <td><img src="content/img/FordMustangV6.jpg" alt="Ford" id="ford"></td>
         <td rowspan="2">
             <p><strong>Arvuta auto rendi maksumust:</strong></p>
             <div id="summa">

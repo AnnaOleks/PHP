@@ -1,3 +1,4 @@
+<br>
 <h1> Majake</h1>
 <br>
 <table id="tablemajake">

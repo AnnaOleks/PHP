@@ -107,7 +107,6 @@ body{
     display: block;
     font-family: 'Lato', serif;
     background: black;
-    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -124,10 +123,14 @@ main{
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 40px;
 }
 a{
     text-decoration: none;
-    color: #77e0cb;
+    color: #fddcf0;
+}
+h3{
+    color: #cefbf4;
 }
 p{
     text-align: left;
@@ -180,6 +183,15 @@ input[type=submit]:hover{
     background-color: black;
     border-color: white;
     color: white;
+}
+input[type=text]{
+    border: double 5px black;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: gray;
+    padding: 10px;
+    width: 130px;
 }
 
 
@@ -317,7 +329,7 @@ table#tablemajake tr:nth-child(1) td:nth-child(5) {
 }
 #radiuspaike{
     width: 140px;
-    height: 35px;
+    height: 20px;
     border: double 5px black;
     border-radius: 30px;
     font-size: 16px;
@@ -469,7 +481,7 @@ caption{
 
 /*matemTehted*/
 
-#moistatus{
+.moistatus{
     text-align: left;
     font-size: 16px;
 }
@@ -481,13 +493,42 @@ caption{
     background-color: white;
     padding: 10px;
     border: double 5px black;
+}
 
+
+/*tekstFynktsioonid*/
+
+.funktsioonid{
+    text-align: left;
+    font-size: 16px;
+}
+#vastus{
+    text-align: left;
 }
 
 
 /*ajafunktsioonid*/
 
+table#aeg{
+    width: 100%;
+    table-layout: fixed;
+}
+table#aeg tr:nth-child(1) td:nth-child(1){
+    vertical-align: top;
+    width: 50%;
+}
+table#aeg tr:nth-child(1) td:nth-child(2){
+    vertical-align: top;
+    width: 50%;
+}
 #hooaeg{
-    width: 20%;
     border: double 5px black;
+    text-align: left;
+}
+#hooajapilt{
+    position: absolute;
+    width: 300px;
+    top:630px;
+    right: 25px;
+    z-index: 1;
 }
