@@ -24,7 +24,7 @@ function clearVarsExcept($url, $varname) {
             <br>
         </div>
         <div id="deercontainer">
-            <img src="../content/img/deer.png" alt="deer" id="deer">
+            <img src="content/deer.png" alt="deer" id="deer">
         </div>
     </div>
     <div class="card-container">
