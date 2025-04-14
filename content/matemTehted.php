@@ -10,9 +10,9 @@ function clearVarsExcept($url, $varname) {
     return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
 }
 echo "<br>";
-echo "<h1>Matemaatilised tehted</h1>";
-echo "<a href='https://www.metshein.com/unit/php-matemaatilised-tehted-ulesanne-2/'>
-    PHP matemaatilised tehted</a>";
+echo "<h2>Matemaatilised tehted</h2>";
+echo "<a href='https://www.metshein.com/unit/php-matemaatilised-tehted-ulesanne-2/'>PHP matemaatilised tehted</a>";
+echo "<br>";
 echo "<br>";
 echo "<br>";
 ?>
@@ -20,7 +20,7 @@ echo "<br>";
 <div class="moistatus">
     <?php
     // mõistatus
-    echo "<h3> Мы загадали 2 числа до 10 </h3>";
+    echo "<h4> Мы загадали 2 числа до 10 </h4>";
     $arv1=10;
     $arv2=5;
     //в подсказках перебрать все математические операции
@@ -35,33 +35,38 @@ echo "<br>";
     echo "</ul>";
     echo "<br>";
     echo "<br>";
-    echo "<h3>Vastuste kontroll</h3>";
     ?>
 </div>
-<form id="formarvud" name="arvud" action="<?=clearVarsExcept(basename($_SERVER['REQUEST_URI']), "leht")?>" method='post'>
-    <label for="arv1">Arv 1: </label>
-    <input type="number" name="arv1" id="arv1" min="0" max="15" step="1">
-    <br>
-    <label for="arv2">Arv 2: </label>
-    <input type="number" name="arv2" id="arv2" min="0" max="10" step="1">
-    <input type="submit" value="kontrolli">
-</form>
-<br>
-<br>
-
-<?php
-if(isset($_REQUEST["arv1"])){
-    if($_REQUEST["arv1"]==$arv1){
-        if($_REQUEST["arv2"]==$arv2){
-            echo "<p><strong>Õige!</strong></p><br>";
-            echo "<body style='background-color:#77e0cb;'></body>";
+<div class="moistatusvasus">
+    <?php
+    if(isset($_REQUEST["arv1"])){
+        if($_REQUEST["arv1"]==$arv1){
+            if($_REQUEST["arv2"]==$arv2){
+                echo "<p><strong>Õige!</strong></p><br>";
+                echo "<div class='moistatusvasus' style='background-color:#40bcc0;'>";
+            }
+        }else{
+            echo "<p><strong>Vale! Proovi uuesti!</strong></p><br>";
+            echo "<div class='moistatusvasus' style='background-color:#c040bc;'>";
         }
-    }else{
-        echo "<p><strong>Vale! Proovi uuesti!</strong></p><br>";
-        echo "<body style='background-color:#fddcf0;'></body>";
     }
-}
-?>
+    ?>
+    <h4>Vastuste kontroll</h4>
+    <form id="formarvud" name="arvud" action="<?=clearVarsExcept(basename($_SERVER['REQUEST_URI']), "leht")?>" method='post'>
+        <label for="arv1">Arv 1: </label>
+        <br>
+        <input type="number" name="arv1" id="arv1" min="0" max="15" step="1">
+        <br>
+        <br>
+        <label for="arv2">Arv 2: </label>
+        <br>
+        <input type="number" name="arv2" id="arv2" min="0" max="10" step="1">
+        <input type="submit" value="kontrolli">
+    </form>
+    <br>
+    <br>
+
+</div>
 <br>
 <br>
 <div id="kood">

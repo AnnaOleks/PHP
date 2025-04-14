@@ -9,15 +9,16 @@ function clearVarsExcept($url, $varname) {
     return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
 }
 echo "<br>";
-echo "<h1>Tekstfunktsioonid</h1>";
+echo "<h2>Tekstfunktsioonid</h2>";
 echo "<a href='https://www.metshein.com/unit/php-tekstifunktsioonid-ulesanne-9/'>PHP – Tekstifunktsioonid</a>";
+echo "<br>";
 echo "<br>";
 ?>
 <div class="funktsioonid">
      <?php
      echo "<br>";
      $tekst="PHP on skriptkeel serveri pool";
-     echo "<h3>$tekst</h3>";
+     echo "<h4>$tekst</h4>";
      echo "Teksti pikkus on (strlen()): ".strlen($tekst);
      echo"<br>";
      echo "Esimesed 6 tähte on (substr()): ".substr($tekst,0,6);
@@ -42,7 +43,7 @@ echo "<br>";
 </div>
 <div class="moistatus">
     <?php
-    echo "<h3>Mõistatus. Õppeaine.</h3>";
+    echo "<h4>Mõistatus. Õppeaine.</h4>";
     $aine="Veebirakendus";
     echo "<ol>";
     echo "<li>Õpeane nimetuses on: ".strlen($aine)." tähti</li>";
@@ -57,21 +58,21 @@ echo "<br>";
     echo "<br>";
     ?>
 </div>
-
-<form id="vastus" name="ainevastus" action="<?=clearVarsExcept(basename($_SERVER['REQUEST_URI']), "leht")?>" method='post'>
-    <label for="aine"><h3>Vastuse kontroll:</h3></label>
-    <input type="text" name="aine" id="aine">
-    <input type="submit" value="kontrolli">
-</form>
-
-<?php
-if(isset($_REQUEST["aine"])){
-    if($_REQUEST["aine"]==$aine){
-        echo "<p><strong>Õige!</strong></p><br>";
-        echo "<body style='background-color:#77e0cb;'></body>";
-    }else{
-        echo "<p><strong>Vale! Proovi uuesti!</strong></p><br>";
-        echo "<body style='background-color:#fddcf0;'></body>";
+<div class="moistatusvasus">
+    <?php
+    if(isset($_REQUEST["aine"])){
+        if($_REQUEST["aine"]==$aine){
+            echo "<p><strong>Õige!</strong></p><br>";
+            echo "<div class='moistatusvasus' style='background-color:#40bcc0;'>";
+        }else{
+            echo "<p><strong>Vale! Proovi uuesti!</strong></p><br>";
+            echo "<div class='moistatusvasus' style='background-color:#c040bc;'>";
+        }
     }
-}
-?>
+    ?>
+    <form id="vastus" name="ainevastus" action="<?=clearVarsExcept(basename($_SERVER['REQUEST_URI']), "leht")?>" method='post'>
+        <label for="aine"><h4>Vastuse kontroll:</h4></label>
+        <input type="text" name="aine" id="aine">
+        <input type="submit" value="kontrolli">
+    </form>
+</div>

@@ -1,5 +1,5 @@
 <nav>
-    <ul>
+    <ul class="menu">
         <li>
             <a href="?leht=avaleht.php">Avaleht</a>
         </li>

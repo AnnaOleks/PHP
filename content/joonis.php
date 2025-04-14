@@ -1,5 +1,5 @@
 <br>
-<h1> Majake</h1>
+<h2> Majake</h2>
 <br>
 <table id="tablemajake">
     <tr>

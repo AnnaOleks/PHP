@@ -1,6 +1,6 @@
 <?php
 echo "<br>";
-echo "<h1>Aja funktsioonid</h1>";
+echo "<h2>Aja funktsioonid</h2>";
 echo "<br>";
 ?>
 <table id="aeg">
@@ -29,7 +29,7 @@ echo "<br>";
                 echo "<br>";
                 echo "<br>";
                 echo "<br>";
-                echo "<h3>Tehted kuupäevaga: </h3>";
+                echo "<h4>Tehted kuupäevaga: </h4>";
                 echo "+1 min: ".date('d.m.Y g:i:s', time()+60);
                 echo "<br>";
                 echo "+1 tund: ".date('d.m.Y g:i:s', time()+60*60);
@@ -38,7 +38,7 @@ echo "<br>";
                 echo "<br>";
                 echo "<br>";
                 echo "<br>";
-                echo "<h3>Kuupäeva genereerimine: </h3>";
+                echo "<h4>Kuupäeva genereerimine: </h4>";
                 echo "mktime(tunnid, minutid, sekundid, kuu, päev, aasta)";
                 echo "Minu sünnipäev on: ".mktime(12,35,15, 8,30,1988);
                 $s=mktime(12,35,15, 8,30,1988);
@@ -50,44 +50,46 @@ echo "<br>";
         <td>
             <!--*neli hooaja pilti - kevad, suvi, sugis, talv-->
             <div id="hooaeg">
-                <h3>Kuvada hooajapiltivastavalt tanasele kuupaevale<br> (kevad, suvi, sugis, talv) </h3>
+                <h4>Kuvada hooajapiltivastavalt tanasele kuupaevale<br> (kevad, suvi, sugis, talv) </h4>
+                <div class="moistatusvasus">
+                    <?php
+                    $tana=new DateTime();
+                    echo "<br>";
+                    //hooaja punktid
+                    $kevad=new DateTime('March 20');
+                    $suvi=new DateTime('June 21');
+                    $sugis=new DateTime('September 22');
+                    $talv=new DateTime('December 22');
+                    switch (true){
+                        //kevad
+                        case $tana>$kevad && $tana<$suvi:
+                            echo "<div id='hooajanimi'>Kevad</div><br>";
+                            $pilt="content/img/spring.gif";
+                            break;
+                        //suvi
+                        case $tana>=$suvi && $tana<$sugis:
+                            echo "Suvi<br>";
+                            $pilt="content/img/summer.gif";
+                            break;
+                        //sugis
+                        case $tana>=$sugis && $tana<$talv:
+                            echo "<h3>Sugis</h3><br>";
+                            $pilt="content/images/autumn.gif";
+                            break;
+                        //sugis
+                        case $tana>=$talv && $tana<$kevad:
+                            echo "Talv<br>";
+                            $pilt="content/images/winter.gif";
+                            break;
+                    }
+                    echo "Täna on (m-d-Y): ".$tana->format('m-d-Y');
+                    ?>
+                    <img src="<?=$pilt?>" alt="hooaja pilt" id="hooajapilt">
+                </div>
                 <?php
-                $tana=new DateTime();
-                echo "Täna on (m-d-Y): ".$tana->format('m-d-Y');
-                echo "<br>";
-                //hooaja punktid
-                $kevad=new DateTime('March 20');
-                $suvi=new DateTime('June 21');
-                $sugis=new DateTime('September 22');
-                $talv=new DateTime('December 22');
-
-                switch (true){
-                    //kevad
-                    case $tana>$kevad && $tana<$suvi:
-                        echo "Kevad<br>";
-                        $pilt="content/img/spring2.png";
-                        break;
-                    //suvi
-                    case $tana>=$suvi && $tana<$sugis:
-                        echo "Suvi<br>";
-                        $pilt="content/images/summer2.png";
-                        break;
-                    //sugis
-                    case $tana>=$sugis && $tana<$talv:
-                        echo "Sugis<br>";
-                        $pilt="content/images/autumn2.png";
-                        break;
-                    //sugis
-                    case $tana>=$talv && $tana<$kevad:
-                        echo "Talv<br>";
-                        $pilt="content/images/winter2.png";
-                        break;
-                }
-                ?>
-                <?php
                 echo "<br>";
                 echo "<br>";
-                echo "<h3>Harjutused</h3>";
+                echo "<h4>Harjutused</h4>";
                 echo "<br>";
                 $kuud=array(1=>'Jaanuar', 2=>'Veebruar', 3=>'Märts', 4=>'Aprill', 5=>'Mai', 6=>'Juuni', 7=>'Juuli', 8=>'August', 9=>'September', 10=>'Oktober', 11=>'November', 12=>'December');
                 $paev=date('d');
@@ -102,7 +104,7 @@ echo "<br>";
                 echo "<br>";
                 echo "Minu sünnipäev oli nädalapäeval (30.08.1988): ".date("l", gmmktime(0,0,0,8,30,1988));
                 ?>
-                <img src="<?=$pilt?>" alt="hooaja pilt" id="hooajapilt">
+
             </div>
         </td>
     </tr>

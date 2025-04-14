@@ -12,10 +12,6 @@
 <?php
 include("header.php");
 ?>
-<!--navigeerimismenyy-->
-<?php
-include("nav.php");
-?>
 <!--content kaustast failide sisud-->
 <main>
     <?php
