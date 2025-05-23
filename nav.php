@@ -15,6 +15,9 @@
                 <li>
                     <a href="?leht=ajaFunktsioonid.php">Aja Funktsioonid</a>
                 </li>
+                <li>
+                    <a href="https://annaoleks24.thkit.ee/piltHaaletamine/fotoKonkursPildiValik.php?id=1">Fotokonkurss</a>
+                </li>
             </ul>
         </li>
         <li>
